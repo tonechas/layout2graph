@@ -1,0 +1,21 @@
+# Compiled Python code
+    __pycache__/
+
+# Log data
+    logs/
+
+# Temporary files for AutoCAD entity handles
+    temp/
+
+# Backup AutoCAD files
+    *.bak
+
+# All files in graphs/ except mcc.pdf
+    *.pkl
+    *.log
+    *.aux
+    *.gz
+    *.tex
+    *.png
+    *.pdf
+    !mcc.pdf

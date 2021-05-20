@@ -1,0 +1,4 @@
+comtypes==1.1.10
+logging=0.5.1.2
+networkx=2.5.1
+pywin32=300
