@@ -1,0 +1,2 @@
+# Reclassify `.dwg` files as AutoLISP
+*.dwg linguist-language=AutoLISP

@@ -1,5 +1,20 @@
 """Tests for layout2graph.py
 
+To run the tests:
+
+layout2graph   <<< Type `python -m unittest` here
+├── __init__.py
+├── layout2graph
+│   ├── __init__.py
+│   ├── config.py
+│   ├── layout2graph.py
+│   ├── point_in_polygon.py
+│   └── utils.py
+└── test
+    ├── __init__.py
+    └── test_layout2graph.py
+
+
 Author: antfdez@uvigo.es
 """
 

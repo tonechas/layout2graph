@@ -28,9 +28,13 @@ import sys
 import win32com.client
 
 
-from layout2graph.config import study_case, target_nodes, target_edges, key
-from layout2graph.point_in_polygon import wn_PnPoly
-from layout2graph import utils
+# Necessary to import the remaining modules when running tests
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
+
+
+from config import study_case, target_nodes, target_edges, key
+from point_in_polygon import wn_PnPoly
+import utils
 
 
 #===========#
@@ -695,10 +699,10 @@ def get_autocad_instance():
 
     try:
         # Late-bound IDispatch
-        acad = win32com.client.dynamic.Dispatch(prog_id)
+        #acad = win32com.client.dynamic.Dispatch(prog_id)
         #acad = win32com.client.Dispatch(prog_id)
         # Early-bound IDispatchg
-        #acad = win32com.client.gencache.EnsureDispatch(prog_id)
+        acad = win32com.client.gencache.EnsureDispatch(prog_id)
     #except win32com.client.pythoncom.pywintypes.com_error:
     except:
         raise
@@ -800,10 +804,10 @@ def display_report(simplified, target):
 if __name__ == '__main__':
     
     # Define data folders
-    cwd = os.getcwd().replace('\\', '/')
-    dwg_folder = f'{cwd}/{study_case}/drawings'
-    graph_folder = f'{cwd}/{study_case}/graphs'
-    temp_folder = f'{cwd}/{study_case}/temp'
+    parent = os.path.dirname(os.getcwd()).replace('\\', '/')
+    dwg_folder = f'{parent}/{study_case}/drawings'
+    graph_folder = f'{parent}/{study_case}/graphs'
+    temp_folder = f'{parent}/{study_case}/temp'
 
     # Create directories if necessary
     for f in [graph_folder, temp_folder]:
