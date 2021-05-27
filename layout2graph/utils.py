@@ -156,7 +156,7 @@ def draw_target(folder, target, essential, required, key,
     if show_legend:
         draw_legend(target, key, ax1, props)
 
-    plt.show(fig)
+    fig.show()
     filename = f'graph-{target.name.lower()}.png'
     save_figure(folder, filename, fig)
 
@@ -180,6 +180,6 @@ def draw_solution(folder, full, pruned, essential, required, key,
         draw_legend(full, key, ax2, props)
 
     fig.suptitle(f'Graph {number}', fontsize=18)
-    plt.show(fig)
+    fig.show()
     filename = f'graph-{number}.png'
     save_figure(folder, filename, fig)

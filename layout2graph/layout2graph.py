@@ -27,6 +27,11 @@ import psutil
 import sys
 import win32com.client
 
+import matplotlib as mpl
+
+
+# Get rid of max_open_warnings
+mpl.rc('figure', max_open_warning = 0)
 
 # Necessary to import the remaining modules when running tests
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
@@ -873,3 +878,5 @@ if __name__ == '__main__':
         display_report(graph_simplified, target_graph)
         
         graphs.append((graph_complete, graph_simplified))
+
+    _ = input('Press any key to quit ')
