@@ -13,3 +13,5 @@ First you have to define the following variables in `config.py`:
 * `key` is a dictionary whose keys are integer numbers and the values are the names of the different spaces.
 
 When the configuration is complete you simply have to run `layout2graph.py`.
+## Caveat
+If you get a weird `win32com` exception when trying to run the program, you should locate and remove the `gen_py` folder as recommended [here](https://stackoverflow.com/questions/9024668/added-typelib-via-makepy-for-autocad-now-win32com-not-working-for-autocad).
